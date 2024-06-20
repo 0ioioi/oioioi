@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oi oi oi oi oi oi oi oi oi oi oi oi oi oi</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+        }
+        #musicButton1 {
+            visibility: hidden; 
+            width: 100%;
+            height: 100%;
+            position: fixed; 
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="content" id="textContainer">      
+    <button id="musicButton1" class="musicButton"></button>
+</div>
+<audio id="backgroundMusic1" src="https://firebasestorage.googleapis.com/v0/b/nhachay-43b11.appspot.com/o/Y2meta.app%20-%20Red%20Larva%20Meme%20(320%20kbps)%20(mp3cut.net).mp3?alt=media&token=a9d5a374-392f-41f4-b11f-0db6660af006" preload="auto" muted loop></audio>
+    <script>
+    function addOiOiOi() {
+            var textContainer = document.getElementById('textContainer');
+            textContainer.textContent += 'oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi oi';
+        }
+        
+        setInterval(addOiOiOi, 100);
+        
+        const backgroundMusic = document.getElementById('backgroundMusic1');
+
+        function playMusic() {
+            backgroundMusic.play().then(() => {
+                console.log('Playback started!');
+            }).catch(error => {
+                console.log('Error playing the audio:', error);
+            });
+        }
+
+        document.addEventListener('click', () => {
+            backgroundMusic.muted = false;
+            playMusic();
+        });        
+        document.addEventListener('touchstart', () => {
+            backgroundMusic.muted = false;
+            playMusic();
+        });
+    </script>
+</body>
+</html>
